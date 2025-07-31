@@ -198,7 +198,7 @@
 /* Grid de logos */
 .logos-container .logos-grid {
   display: grid; 
-  grid-template-columns: repeat(2, minmax(0, 1fr)); 
+  grid-template-columns: repeat(1, minmax(0, 1fr)); 
   gap: 2rem; 
   color: #6b7280; 
 }
@@ -290,11 +290,12 @@
 
     .feature-card {
       background: white;
-      padding: 2rem;
-      border-radius: 0.25rem;
+      padding: 0 0 1rem 0;
+      border-radius: 0.5rem;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       transition: all 0.3s ease;
       text-align: center;
+      overflow: hidden;
     }
 
     .feature-card:hover {
@@ -318,13 +319,15 @@
     .feature-card h3 {
       font-size: 1.25rem;
       font-weight: 600;
-      margin-bottom: 1rem;
+      /* margin-bottom: 1rem; */
       color: #2d3748;
+      padding: 0 1rem;
     }
-
+    
     .feature-card p {
       color: #718096;
       line-height: 1.6;
+      padding: 0 1rem;
     }
 
     /* Testimonials */
@@ -549,10 +552,10 @@
     }
 
     .footer-bottom {
-      border-top: 1px solid #4a5568;
+      border-top: 1px solid #ddd;
       padding-top: 2rem;
       text-align: center;
-      color: #a0aec0;
+      color: #333;
     }
 
     /* Responsive Design */
