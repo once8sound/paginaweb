@@ -28,19 +28,49 @@ function handleHeaderScroll() {
 // Mobile menu toggle
 function setupMobileMenu() {
   const mobileMenu = document.querySelector(".mobile-menu");
-  const navLinks = document.querySelector(".nav-links");
+  const navLinks = document.querySelector(".nav-links-mobile");
 
-  mobileMenu.addEventListener("click", () => {
-    navLinks.style.display =
-      navLinks.style.display === "flex" ? "none" : "flex";
-    navLinks.style.position = "absolute";
-    navLinks.style.top = "100%";
-    navLinks.style.left = "0";
-    navLinks.style.right = "0";
-    navLinks.style.background = "white";
-    navLinks.style.flexDirection = "column";
-    navLinks.style.padding = "1rem";
-    navLinks.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.1)";
+  // Function to close the menu
+  function closeMenu() {
+    navLinks.style.display = "none";
+  }
+
+  // Function to toggle the menu
+  function toggleMenu() {
+    const isOpen = navLinks.style.display === "flex";
+    
+    if (isOpen) {
+      closeMenu();
+    } else {
+      navLinks.style.display = "flex";
+      navLinks.style.position = "absolute";
+      navLinks.style.top = "100%";
+      navLinks.style.left = "0";
+      navLinks.style.right = "0";
+      navLinks.style.background = "white";
+      navLinks.style.flexDirection = "column";
+      navLinks.style.padding = "1rem";
+      navLinks.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.1)";
+    }
+  }
+
+  // Toggle menu when mobile menu button is clicked
+  mobileMenu.addEventListener("click", toggleMenu);
+
+  // Close menu when any nav link is clicked
+  const navLinkElements = navLinks.querySelectorAll(".nav-links-mobile a");
+  navLinkElements.forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  // Optional: Close menu when clicking outside
+  document.addEventListener("click", (event) => {
+    const isClickInsideMenu = navLinks.contains(event.target);
+    const isClickOnToggle = mobileMenu.contains(event.target);
+    
+    if (!isClickInsideMenu && !isClickOnToggle && navLinks.style.display === "flex") {
+      closeMenu();
+    }
   });
 }
 
@@ -140,6 +170,10 @@ function initCarousel() {
 
   // Crear el segundo set de marcas (duplicado para efecto infinito)
   brands.forEach((brand) => {
+    carousel.appendChild(createBrandElement(brand, true));
+  });
+
+    brands.forEach((brand) => {
     carousel.appendChild(createBrandElement(brand, true));
   });
 

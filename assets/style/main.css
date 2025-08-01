@@ -53,6 +53,17 @@ nav {
   gap: 2rem;
 }
 
+.nav-links-mobile {
+  display: none;
+    list-style: none;
+  gap: 2rem;
+}
+
+.nav-links-mobile li { 
+  text-align: center;
+}
+
+.nav-links-mobile a,
 .nav-links a {
   text-decoration: none;
   color: #4a5568;
@@ -356,7 +367,7 @@ nav {
   scroll-margin-top: 120px;
   padding: 80px 0 80px 0;
   background: #231f20;
-  background-image: url("https://res.cloudinary.com/srcouto/image/upload/v1754006959/once8/tniaz1ccllfpwwum4h9n.jpg");
+  background-image: url("https://res.cloudinary.com/srcouto/image/upload/v1754013817/once8/xlhltdu4ni0hlqb7u9yh.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -550,6 +561,8 @@ nav {
   background-scroll: fixed;
   background-color: #1a202c;
   background-image: url("https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-repeat: no-repeat;
+  background-size: cover;
   color: white;
   text-align: center;
   position: relative;
