@@ -19,6 +19,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  text-wrap: balance;
 }
 
 /* Header */
@@ -114,7 +115,7 @@ nav {
 }
 
 .bg-gradient-b {
-  background: linear-gradient(180deg, transparent 70%, #231f20 100%);
+  background: linear-gradient(180deg, transparent 40%, #231f20 100%);
   position: absolute;
   z-index: 1;
   inset: 0;
@@ -179,7 +180,6 @@ nav {
 .carousel-section {
   width: 100%;
   overflow: hidden;
-  background-color: #231f20;
   padding: 48px 0;
   max-width: 96rem;
   margin: 0 auto;
@@ -355,8 +355,11 @@ nav {
 /* Features Section */
 .features {
   scroll-margin-top: 120px;
-  padding: 10px 0 80px 0;
+  padding: 80px 0 80px 0;
   background: #231f20;
+  background-image: url("https://res.cloudinary.com/srcouto/image/upload/v1754006959/once8/tniaz1ccllfpwwum4h9n.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .section-title {
