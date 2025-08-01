@@ -67,7 +67,7 @@ nav {
 .cta-button {
   background: #333;
   color: white;
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   border: none;
   border-radius: 0.25rem;
   font-weight: 600;
@@ -78,7 +78,6 @@ nav {
 }
 
 .cta-button:hover {
-  transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
 }
 
@@ -147,7 +146,7 @@ nav {
 .hero-cta {
   background: white;
   color: #333;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1rem;
   border: none;
   text-decoration: none;
   border-radius: 0.25rem;

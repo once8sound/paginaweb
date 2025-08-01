@@ -33,7 +33,7 @@
       <div class="container">
         <nav>
           <a href="#inicio" class="logo">
-            <img src="assets/img/logo.svg" style="width: 160px;height: 50px;" />
+            <img src="assets/img/logo.svg" style="width: 160px; height: 50px" />
           </a>
           <ul class="nav-links">
             <li><a href="#inicio">Inicio</a></li>
@@ -57,10 +57,10 @@
           <h1>Sonido profesional</h1>
           <p>
             Alquila equipos de audio de alta calidad para conciertos, eventos
-            corporativos, bodas y producciones.
-            Servicio excepcional y tecnología de vanguardia.
+            corporativos, bodas y producciones. Servicio excepcional y
+            tecnología de vanguardia.
           </p>
-          <a href="#contacto" class="hero-cta "> Cotiza tu evento ahora </a>
+          <a href="#contacto" class="hero-cta"> Cotiza tu evento ahora </a>
         </div>
       </div>
       <div class="bg-gradient-b">a</div>
@@ -118,7 +118,7 @@
       </div>
       <div class="carousel-section">
         <div class="">
-          <h2 class="section-subtitle">Marcas de Confianza</h2>
+          <h2 class="section-subtitle">Equipos de confianza</h2>
           <div class="carousel-wrapper">
             <div class="fade-left"></div>
             <div class="fade-right"></div>
@@ -168,12 +168,11 @@
     <section id="contacto" class="final-cta">
       <div class="container">
         <h2 class="fade-in">
-          ¿Listo para hacer que 
-          tu evento suene increíble?
+          ¿Listo para hacer que tu evento suene increíble?
         </h2>
         <p class="fade-in">
-          Contactanos via mail para más información o
-          solicitar una cotización sin costo.
+          Contactanos via mail para más información o solicitar una cotización
+          sin costo.
         </p>
         <p
           style="
@@ -185,6 +184,7 @@
             margin-top: 0.5rem;
             font-weight: 400;
             letter-spacing: 1px;
+            backdrop-filter: url(#glass);
           "
           class="fade-in"
         >
@@ -209,12 +209,33 @@
       </div>
     </footer>
 
+    <svg style="position: absolute; width: 0; height: 0">
+      <filter
+        id="glass"
+        x="-50%"
+        y="-50%"
+        width="200%"
+        height="200%"
+        primitiveUnits="objectBoundingBox"
+      >
+        <feImage x="-50%" y="-50%" width="200%" height="200%" result="map" />
+        <feGaussianBlur in="SourceGraphic" stdDeviation="0.02" result="blur" />
+        <feDisplacementMap
+          id="disp"
+          in="blur"
+          in2="map"
+          scale="0.8"
+          xChannelSelector="R"
+          yChannelSelector="G"
+        ></feDisplacementMap>
+      </filter>
+    </svg>
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
     />
     <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
     <script src="./assets/main.js"></script>
-
   </body>
 </html>
