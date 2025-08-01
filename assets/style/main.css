@@ -55,11 +55,11 @@ nav {
 
 .nav-links-mobile {
   display: none;
-    list-style: none;
+  list-style: none;
   gap: 2rem;
 }
 
-.nav-links-mobile li { 
+.nav-links-mobile li {
   text-align: center;
 }
 
@@ -364,7 +364,7 @@ nav {
 
 /* Features Section */
 .features {
-  scroll-margin-top: 120px;
+  scroll-margin-top: 40px;
   padding: 80px 0 80px 0;
   background: #231f20;
   background-image: url("https://res.cloudinary.com/srcouto/image/upload/v1754013817/once8/xlhltdu4ni0hlqb7u9yh.jpg");
@@ -375,6 +375,7 @@ nav {
 .section-title {
   text-align: center;
   font-size: 2.5rem;
+  line-height: 1;
   font-weight: 700;
   margin-bottom: 3rem;
   color: #fff;
@@ -397,8 +398,23 @@ nav {
   overflow: hidden;
 }
 
+.feature-card .feature-card-img {
+  overflow: hidden;
+
+  &:hover {
+    img {
+      transform: scale(1.1);
+      cursor: zoom-in;
+    }
+  }
+}
+
+.feature-card img {
+  cursor: zoom-in;
+  transition: all 0.3s ease;
+}
+
 .feature-card:hover {
-  transform: translateY(-1px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
@@ -416,11 +432,12 @@ nav {
 }
 
 .feature-card h3 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  /* margin-bottom: 1rem; */
+  margin-bottom: 1rem;
   color: #2d3748;
   padding: 0 1rem;
+  line-height: 1.2;
 }
 
 .feature-card p {
